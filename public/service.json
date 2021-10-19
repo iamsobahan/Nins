@@ -1,0 +1,66 @@
+[
+    {    "id" : 1,
+        "name": "Cardiovascular",
+        "img" : "https://i.ibb.co/GFNgz0p/Cardiovascular.png",
+        "description" : "Relating to the circulatory system, which comprises the heart and blood vessels and carries nutrients and oxygen to the tissues of the body and removes carbon dioxide and other wastes from them.",
+        "doctor": "Sobahan Mia",
+        "position": "Orthopedic",
+        "doctorImg": "https://i.ibb.co/h2pGPpH/team-7-270x270.jpg"
+
+    },
+    {
+        "name": "Pragnancy",
+        "img" : "https://i.ibb.co/4FrSw08/Pregnancy.png",
+        "description" : "Relating to the circulatory system, which comprises the heart and blood vessels and carries nutrients and oxygen to the tissues of the body and removes carbon dioxide and other wastes from them.",
+        "id" : 2,
+        "doctor": "Haliam Z. Dicolaz",
+        "position": "Pragnancy",
+        "doctorImg": "https://i.ibb.co/X5yBKMt/team-6-270x270.jpg"
+
+    },
+    {
+        "name": "Orthopedics",
+        "img" : "https://i.ibb.co/WnXncf6/Orthopedics.png",
+        "description" : "comprises the heart and blood vessels and carries nutrients and oxygen to the tissues of the body and removes carbon dioxide and other wastes from them.",
+        "id" : 3,
+        "doctor": "Salima Rana",
+        "position": "Orthopedics",
+        "doctorImg": "https://i.ibb.co/FYPLqtw/team-8-270x270.jpg"
+
+    },
+    {
+        "name": "Ophtolmologue",
+        "img" : "https://i.ibb.co/CtQ1jLv/ophtalmologue.png",
+        "description" : "Relating to the circulatory system, which comprises the heart and blood vessels and carries nutrients and oxygen to the tissues of the body and removes carbon dioxide and other wastes from them.",
+        "id" : 4,
+        "doctor": "Nicolas D. Case",
+       "position": "Ophtolmologue",
+       "doctorImg": "https://i.ibb.co/VVZc3Pb/team-1-270x270.jpg"
+
+    },
+    {
+        "name": "Neurology",
+        "img" : "https://i.ibb.co/ZL96zmt/neurology.png",
+        "description" : "Neurology is the branch of medicine concerned with the study and treatment of disorders of the nervous system.",
+        "id" : 5,
+        "doctor": "Phumdon H. Nor",
+      "position": "neurologist",
+       "doctorImg": "https://i.ibb.co/Gsq57qx/com.png"
+
+    },
+    {
+        "name": "Dental",
+        "img" : "https://i.ibb.co/zsBmr7s/dental.png",
+        "description" : "Dentistry, also known as dental medicine and oral medicine, is a branch of medicine that consists of the study, diagnosis, prevention, and treatment ",
+        "id" : 6,
+        "doctor": "Johanes D. Moran",
+        "position": "Dental Hygienist",
+       "doctorImg" : "https://i.ibb.co/ctkvw3N/b2-150x150.jpg"
+
+    }
+]
+
+
+
+
+
