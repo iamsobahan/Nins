@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyCbS-Ujmsp1RAw3Kx2FqO9W_UkSqrcMKEw",
-  authDomain: "my-hospital-nins.firebaseapp.com",
-  projectId: "my-hospital-nins",
-  storageBucket: "my-hospital-nins.appspot.com",
-  messagingSenderId: "159475092670",
-  appId: "1:159475092670:web:912064575fce4f58cce2ef",
+  apiKey: "AIzaSyD5idYjoe4K6wV7c-2-GIXFRI71FUEXp7o",
+  authDomain: "ninsmyhospital.firebaseapp.com",
+  projectId: "ninsmyhospital",
+  storageBucket: "ninsmyhospital.appspot.com",
+  messagingSenderId: "1091668727818",
+  appId: "1:1091668727818:web:a425ead875b29466e2a7f3",
 };
 
 export default firebaseConfig;
