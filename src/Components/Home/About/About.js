@@ -4,11 +4,15 @@ import about from "../../../images/about.png";
 import "./About.css";
 
 const About = () => {
+
+  // using useHistory for rounting after clicking button
+
   const history = useHistory();
   const clickhandler = () => {
     history.push("/departments");
   };
   return (
+    
     <div className="container mt-5">
       <div className="card mb-3">
         <div className="row g-0">
@@ -27,13 +31,17 @@ const About = () => {
                 tincidunt, semper vel lectus. Mauris eget eleifend massa.
                 Praesent ex felis, laoreet nec tellus in, laoreet commodo ipsum.
               </p>
-              <button onClick={clickhandler} className="btn btn-danger">
+              <button onClick={clickhandler} className="btn btn-danger mt-3">
                 Learn More
               </button>
             </div>
           </div>
           <div className="col-md-6 col-sm-12">
-            <img src={about} className="img rounded-end mx-auto" alt="..." />
+            <img
+              src={about}
+              className="img-fluid rounded-end mx-auto"
+              alt="..."
+            />
           </div>
         </div>
       </div>

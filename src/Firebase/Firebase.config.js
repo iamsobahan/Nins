@@ -1,3 +1,5 @@
+// firebase configeration secret key
+
 const firebaseConfig = {
   apiKey: "AIzaSyD5idYjoe4K6wV7c-2-GIXFRI71FUEXp7o",
   authDomain: "ninsmyhospital.firebaseapp.com",

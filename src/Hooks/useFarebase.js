@@ -8,6 +8,7 @@ import {
 import { useEffect, useState } from "react";
 import FirebaseInt from "../Firebase/Firebase.init";
 
+// invoking inialize app 
 FirebaseInt();
 
 const useFirebase = () => {
@@ -15,13 +16,14 @@ const useFirebase = () => {
   const [isloading, setloading] = useState(true);
   const auth = getAuth();
   const googleprovider = new GoogleAuthProvider();
-
+// authentication for google sign in
   const googleSignIn = () => {
     setloading(true);
     return signInWithPopup(auth, googleprovider);
     setloading(false);
   };
-
+  
+// logout option 
   const logOut = () => {
     setloading(true);
     signOut(auth)

@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="footer pt-2 bg-dark text-light mt-5">
       <div className="container">
         <div className="pb-3 border-bottom text-center">
-          <img className="logo" src={logo} alt="" />
+          <img className="f_logo" src={logo} alt="" />
           <h2 className="footer_custom_color">
             National Institute of Neuro-Sciences & Hospital
           </h2>

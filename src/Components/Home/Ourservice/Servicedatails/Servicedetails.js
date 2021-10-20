@@ -4,7 +4,9 @@ import { useParams } from "react-router";
 import ServiceItem from "../ServiceItem/ServiceItem";
 
 const Servicedetails = () => {
+  // collecting dynamic id via useParams
   const { id } = useParams();
+
   const [service, setservice] = useState([]);
   const [serviceItem, setserviceItem] = useState([]);
 
@@ -13,7 +15,8 @@ const Servicedetails = () => {
       .then((result) => result.json())
       .then((data) => setservice(data));
   }, []);
-
+//  filtering from main data according to dynamic service id
+// i have used service dependency cause after load the data then we can filter it .
   useEffect(() => {
     if (service.length) {
       const arr = [];

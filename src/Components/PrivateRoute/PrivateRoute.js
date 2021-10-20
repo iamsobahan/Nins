@@ -4,7 +4,9 @@ import { Redirect, Route } from "react-router";
 import useAuth from "../../Hooks/useAuth";
 
 const PrivateRoute = ({ children, ...rest }) => {
+  //  getting user and is loading from useAuth hooks
   const { user, isloading } = useAuth();
+  //  fix redirect issue.. like when when we refresh the website the private page redirect to login page..
   if (isloading) {
     return (
       <Spinner

@@ -4,6 +4,7 @@ import useServices from "../../../../Hooks/useServices";
 import Service from "../Service/Service";
 
 const Services = () => {
+  // loading data from custom hooks
   const [services] = useServices();
 
   return (

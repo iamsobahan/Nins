@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import "./Service.css";
 
 const Service = (props) => {
+
+  // collecting data from services component
   const { name, description, img, id } = props.service;
 
   return (
@@ -14,7 +16,7 @@ const Service = (props) => {
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description.slice(0, 100)}</Card.Text>
           <Link to={`/servicedetails/${id}`}>
-            <button className="btn btn-danger">Know More</button>
+            <button className="btn btn-danger mt-2">Know More</button>
           </Link>
         </Card.Body>
       </Card>

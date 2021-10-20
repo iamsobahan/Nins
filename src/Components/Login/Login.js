@@ -13,34 +13,52 @@ import { useHistory, useLocation } from "react-router";
 
 const Login = () => {
   const auth = getAuth();
+  // useName for updating user name
   const [useName, setUserName] = useState("");
+  
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  // islogin state for toggle register to log in
   const [islogin, setlogin] = useState(false);
+  //  error state for display error
   const [error, seterror] = useState("");
+
   const { googleSignIn, setuser } = useAuth();
-  const handlerName = (e) => {
-    setUserName(e.target.value);
-  };
+
+
+  // redirect handler for fixing redirect issue like when after we login ,we can redirect ourdisirable section
   const history = useHistory();
   const location = useLocation();
   const redirect = location.state?.from || "/home";
-
   const redirectHandler = () => {
     googleSignIn().then((result) => {
       history.push(redirect);
     });
   };
+
+  // handlerName for collecting user name
+  const handlerName = (e) => {
+    setUserName(e.target.value);
+  };
+ 
+
+   // handleremail for collecting user email
   const handleEmail = (e) => {
     setemail(e.target.value);
   };
+
+    // handlerpassword for collecting user password
   const handlePassword = (e) => {
     setpassword(e.target.value);
   };
 
+
+  // handlechange for checking register or login toggle
   const handlechange = (e) => {
     setlogin(e.target.checked);
   };
+
+// handle register for final registration or login
 
   const handleRegistration = (e) => {
     e.preventDefault();
@@ -88,13 +106,14 @@ const Login = () => {
           seterror(errorMessage);
         });
     };
+// conditional toogle , is user already user or not
 
     islogin ? processLogin(email, password) : createUser(email, password);
   };
   return (
     <div className="my-4">
       <h3 className="text-center fw-bold">Check out Nins — it’s free!</h3>
-      <Container className="w-50 border border-4 p-3 my-4">
+      <Container className="w-50 responsive border border-4 p-3 my-4">
         {islogin ? (
           <h2 className="text-center my-2 text-uppercase fw-light">
             Please Login

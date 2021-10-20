@@ -1,8 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router";
 
 const ServiceItem = (props) => {
+  // array destructuring
   const [obj] = props.item;
+  // object destructuring
   const { name, img, description, doctor, doctorImg } = obj;
+  const history = useHistory();
+  const clickhandler = () => {
+    history.push("/home");
+  };
 
   return (
     <div class="row g-0 border border-4 my-4">
@@ -13,12 +20,18 @@ const ServiceItem = (props) => {
         <div className="card-body">
           <h5 className="card-title">Doctor :{doctor}</h5>
           <span>
-            <img className="w-25 h-25 rounded-pill" src={doctorImg} alt="" />
+            <img
+              className="w-25 h-25 mt-3 rounded-pill"
+              src={doctorImg}
+              alt=""
+            />
           </span>
-          <h5 className="card-title">{name}</h5>
+          <h5 className="card-title mt-5">{name}</h5>
           <p className="card-text">{description}</p>
           <p className="card-text">
-            <button className="btn btn-danger">Go to home</button>
+            <button onClick={clickhandler} className="btn btn-danger mt-4">
+              Go to home
+            </button>
           </p>
         </div>
       </div>

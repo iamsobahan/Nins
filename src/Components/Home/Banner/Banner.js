@@ -7,11 +7,14 @@ import slidethree from "../../../images/slide-4.jpg";
 import { useHistory } from "react-router";
 
 const Banner = () => {
+    // using useHistory for rounting after clicking button
   const history = useHistory();
   const clickhandler = () => {
     history.push("/departments");
   };
   return (
+
+    // i have used carousel slider of react bootstrap
     <Carousel>
       <Carousel.Item className="mother">
         <img
@@ -30,7 +33,7 @@ const Banner = () => {
                 more patients can receive the care they need by connecting with
                 their care teams from home
               </p>
-              <button onClick={clickhandler} className="btn btn-danger">
+              <button onClick={clickhandler} className="btn btn-danger mt-4">
                 Know More
               </button>
             </div>

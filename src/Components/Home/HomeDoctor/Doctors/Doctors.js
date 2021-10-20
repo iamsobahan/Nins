@@ -4,6 +4,7 @@ import useServices from "../../../../Hooks/useServices";
 import Doctor from "../Doctor/Doctor";
 
 const Doctors = () => {
+  // loading data from custom hook where i had already put my data
   const [services] = useServices();
   return (
     <Container>

@@ -3,9 +3,12 @@ import { Card, Col } from "react-bootstrap";
 import "./Doctor.css";
 
 const Doctor = (props) => {
+  // data collecting as props from Doctors.js component
+
   const { doctorImg, doctor, position } = props.doctor;
 
   return (
+    //  i used react bootstrap card
     <Col>
       <Card>
         <Card.Img
