@@ -9,6 +9,7 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
+import { useHistory, useLocation } from "react-router";
 
 const Login = () => {
   const auth = getAuth();
@@ -20,6 +21,15 @@ const Login = () => {
   const { googleSignIn, setuser } = useAuth();
   const handlerName = (e) => {
     setUserName(e.target.value);
+  };
+  const history = useHistory();
+  const location = useLocation();
+  const redirect = location.state?.from || "/home";
+
+  const redirectHandler = () => {
+    googleSignIn().then((result) => {
+      history.push(redirect);
+    });
   };
   const handleEmail = (e) => {
     setemail(e.target.value);
@@ -68,6 +78,7 @@ const Login = () => {
       signInWithEmailAndPassword(auth, email, password)
         .then((result) => {
           const user = result.user;
+          history.push(redirect);
           setuser(user);
           console.log(user);
           seterror("");
@@ -82,7 +93,7 @@ const Login = () => {
   };
   return (
     <div className="my-4">
-      <h3 className="fw-bold text-center">Sign in or create an account</h3>
+      <h3 className="text-center fw-bold">Check out Nins — it’s free!</h3>
       <Container className="w-50 border border-4 p-3 my-4">
         {islogin ? (
           <h2 className="text-center my-2 text-uppercase fw-light">
@@ -133,7 +144,7 @@ const Login = () => {
           </Form.Group>
           <div className="row mb-2 text-danger">{error}</div>
           {islogin ? (
-            <Button variant="danger" type="submit">
+            <Button on variant="danger" type="submit">
               Login
             </Button>
           ) : (
@@ -146,7 +157,8 @@ const Login = () => {
             -------or use one of these options----------
           </p>
           <div
-            onClick={googleSignIn}
+            style={{ cursor: "pointer" }}
+            onClick={redirectHandler}
             className="border border-2 p-2 text-center"
           >
             <img className="img-fluid width" src={google} alt="" />

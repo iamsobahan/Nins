@@ -21,11 +21,11 @@ const Header = () => {
     >
       <Container className="text-dark">
         <Navbar.Brand href="#home">
-          <img className="rounded-2" src={logo} alt="" />
+          <img className="logo" src={logo} alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className="ms-auto align-items-center">
             <NavLink activeStyle={active} className="mx-3" to="/home">
               Home
             </NavLink>
@@ -33,10 +33,10 @@ const Header = () => {
               Doctors
             </NavLink>
             <NavLink activeStyle={active} className="mx-3" to="/performance">
-              Performance
+              Departments
             </NavLink>
             <NavLink activeStyle={active} className="mx-3" to="*">
-              Home Care
+              Home care
             </NavLink>
 
             {!user.displayName ? (

@@ -1,8 +1,13 @@
 import React from "react";
 import { PieChart, Pie } from "recharts";
 import PerformanceLIne from "../PerformanceLine/PerformanceLIne";
+import useService from "../../Hooks/useServices";
+import { Row } from "react-bootstrap";
+import Departments from "../Departments/Departments";
 
 const Performance = () => {
+  const [services] = useService();
+  console.log(services);
   const data01 = [
     { name: "Group A", value: 400 },
     { name: "Group B", value: 300 },
@@ -25,6 +30,14 @@ const Performance = () => {
 
   return (
     <div className="container my-5">
+      <h2 className="text-uppercase pb-3 border-bottom text-center my-5">
+        Our Departments
+      </h2>
+      <Row md={2} xs={1} lg={3} className="g-4">
+        {services.map((item) => (
+          <Departments key={item.id} item={item}></Departments>
+        ))}
+      </Row>
       <h2 className="text-uppercase pb-3 border-bottom text-center my-5">
         Our Performance
       </h2>

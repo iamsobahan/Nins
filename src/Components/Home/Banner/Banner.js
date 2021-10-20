@@ -4,8 +4,13 @@ import slideOne from "../../../images/slide-1.jpg";
 import slideTwo from "../../../images/slide-2.jpg";
 import "./Banner.css";
 import slidethree from "../../../images/slide-4.jpg";
+import { useHistory } from "react-router";
 
 const Banner = () => {
+  const history = useHistory();
+  const clickhandler = () => {
+    history.push("/performance");
+  };
   return (
     <Carousel>
       <Carousel.Item className="mother">
@@ -25,7 +30,9 @@ const Banner = () => {
                 more patients can receive the care they need by connecting with
                 their care teams from home
               </p>
-              <button className="btn btn-danger">Know More</button>
+              <button onClick={clickhandler} className="btn btn-danger">
+                Know More
+              </button>
             </div>
           </div>
         </div>
@@ -48,7 +55,9 @@ const Banner = () => {
                 more patients can receive the care they need by connecting with
                 their care teams from home
               </p>
-              <button className="btn btn-danger">Know More</button>
+              <button onClick={clickhandler} className="btn btn-danger">
+                Know More
+              </button>
             </div>
           </div>
         </div>
@@ -71,7 +80,9 @@ const Banner = () => {
                 more patients can receive the care they need by connecting with
                 their care teams from home
               </p>
-              <button className="btn btn-danger">Know More</button>
+              <button onClick={clickhandler} className="btn btn-danger">
+                Know More
+              </button>
             </div>
           </div>
         </div>

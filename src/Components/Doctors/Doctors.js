@@ -1,10 +1,11 @@
 import React from "react";
-import { Card, Col } from "react-bootstrap";
+import { Card, Col, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Doctors.css";
 
 const Doctors = (props) => {
-  const { doctorImg, position, doctor } = props.doctor;
+  const { doctorImg, position, doctor, timeshokal, timerat } = props.doctor;
+  console.log(props.doctor);
   return (
     <Col>
       <Card className="p-3">
@@ -15,13 +16,33 @@ const Doctors = (props) => {
         />
         <Card.Body className="text-center">
           <Card.Title>{doctor}</Card.Title>
-          <Card.Text>expert at{position}</Card.Text>
+          <Card.Text>expert at {position}</Card.Text>
         </Card.Body>
-        <Link to="/home">
-          <div className="text-center">
-            <button className="btn btn-danger">go to home</button>
-          </div>
-        </Link>
+        <div className="text-center">
+          <Dropdown>
+            <Dropdown.Toggle variant="danger" id="dropdown-basic">
+              Appoinment Time
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item className="text-center" href="#/action-1">
+                Visit : 600 Taka
+              </Dropdown.Item>
+              <Dropdown.Item className="text-center" href="#/action-2">
+                Morning
+              </Dropdown.Item>
+              <Dropdown.Item className="text-center" href="#/action-2">
+                {timeshokal}
+              </Dropdown.Item>
+              <Dropdown.Item className="text-center" href="#/action-2">
+                Evening
+              </Dropdown.Item>
+              <Dropdown.Item className="text-center" href="#/action-3">
+                {timerat}
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
       </Card>
     </Col>
   );
