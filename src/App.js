@@ -4,14 +4,12 @@ import Header from "./Components/Shared/Header/Header";
 import Home from "./Components/Home/Home/Home";
 import Footer from "./Components/Shared/Footer/Footer";
 import Authprovider from "./Components/AuthProvider/AuthProvider";
-import Servicedetails from "./Components/Home/Servicedatails/Servicedetails";
+import Servicedetails from "./Components/Home/Ourservice/Servicedatails/Servicedetails";
 import NotFound from "./Components/NotFound/NotFound";
 import Login from "./Components/Login/Login";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
-
-import Performance from "./Components/Performation/Performance";
-import Ourdoctor from "./Components/Ourdoctor/Ourdoctor";
-
+import Ourdoctors from "./Components/Ourdoctor/Ourdoctors/Ourdoctors";
+import Depchart from "./Components/OurDepartments/DepChart/Depchart";
 function App() {
   return (
     <Authprovider>
@@ -31,11 +29,11 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <PrivateRoute path="/performance">
-            <Performance></Performance>
+          <PrivateRoute path="/departments">
+            <Depchart></Depchart>
           </PrivateRoute>
           <PrivateRoute path="/doctors">
-            <Ourdoctor></Ourdoctor>
+            <Ourdoctors></Ourdoctors>
           </PrivateRoute>
 
           <Route path="*">

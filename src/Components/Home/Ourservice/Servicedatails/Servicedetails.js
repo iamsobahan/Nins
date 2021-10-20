@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useParams } from "react-router";
-import ServiceItem from "../../ServiceItem/ServiceItem";
+import ServiceItem from "../ServiceItem/ServiceItem";
 
 const Servicedetails = () => {
   const { id } = useParams();

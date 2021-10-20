@@ -9,7 +9,7 @@ import { useHistory } from "react-router";
 const Banner = () => {
   const history = useHistory();
   const clickhandler = () => {
-    history.push("/performance");
+    history.push("/departments");
   };
   return (
     <Carousel>

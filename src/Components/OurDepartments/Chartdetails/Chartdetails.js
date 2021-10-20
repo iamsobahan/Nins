@@ -1,6 +1,7 @@
-import "./PerformanceLine.css";
+import React from "react";
+import "./Chartdetails.css";
 
-const PerformanceLIne = () => {
+const Chartdetails = () => {
   return (
     <div>
       <h2>What to Consider When Choosing the Best Hospitals In NYC</h2>
@@ -20,4 +21,4 @@ const PerformanceLIne = () => {
   );
 };
 
-export default PerformanceLIne;
+export default Chartdetails;

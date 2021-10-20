@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import useServices from "../../../Hooks/useServices";
+import useServices from "../../../../Hooks/useServices";
 import Doctor from "../Doctor/Doctor";
 
-const Team = () => {
+const Doctors = () => {
   const [services] = useServices();
   return (
     <Container>
@@ -19,4 +19,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default Doctors;

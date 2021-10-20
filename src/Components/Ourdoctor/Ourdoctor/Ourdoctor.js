@@ -1,11 +1,10 @@
 import React from "react";
 import { Card, Col, Dropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "./Doctors.css";
+import "./Ourdoctor.css";
 
-const Doctors = (props) => {
+const Ourdoctor = (props) => {
   const { doctorImg, position, doctor, timeshokal, timerat } = props.doctor;
-  console.log(props.doctor);
+
   return (
     <Col>
       <Card className="p-3">
@@ -48,4 +47,4 @@ const Doctors = (props) => {
   );
 };
 
-export default Doctors;
+export default Ourdoctor;

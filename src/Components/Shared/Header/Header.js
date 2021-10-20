@@ -32,7 +32,7 @@ const Header = () => {
             <NavLink activeStyle={active} className="mx-3" to="/doctors">
               Doctors
             </NavLink>
-            <NavLink activeStyle={active} className="mx-3" to="/performance">
+            <NavLink activeStyle={active} className="mx-3" to="/departments">
               Departments
             </NavLink>
             <NavLink activeStyle={active} className="mx-3" to="*">

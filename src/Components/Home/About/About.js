@@ -6,7 +6,7 @@ import "./About.css";
 const About = () => {
   const history = useHistory();
   const clickhandler = () => {
-    history.push("/performance");
+    history.push("/departments");
   };
   return (
     <div className="container mt-5">
@@ -27,7 +27,9 @@ const About = () => {
                 tincidunt, semper vel lectus. Mauris eget eleifend massa.
                 Praesent ex felis, laoreet nec tellus in, laoreet commodo ipsum.
               </p>
-              <button onClick={clickhandler} className="btn btn-danger">Learn More</button>
+              <button onClick={clickhandler} className="btn btn-danger">
+                Learn More
+              </button>
             </div>
           </div>
           <div className="col-md-6 col-sm-12">

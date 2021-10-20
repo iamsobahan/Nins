@@ -1,13 +1,13 @@
 import React from "react";
-import { PieChart, Pie } from "recharts";
-import PerformanceLIne from "../PerformanceLine/PerformanceLIne";
-import useService from "../../Hooks/useServices";
+import department from "../../../images/department.jpg";
+import Chartdetails from "../../OurDepartments/Chartdetails/Chartdetails";
+import useService from "../../../Hooks/useServices";
 import { Row } from "react-bootstrap";
 import Departments from "../Departments/Departments";
 
-const Performance = () => {
+const Depchart = () => {
   const [services] = useService();
-  console.log(services);
+
   const data01 = [
     { name: "Group A", value: 400 },
     { name: "Group B", value: 300 },
@@ -38,38 +38,17 @@ const Performance = () => {
           <Departments key={item.id} item={item}></Departments>
         ))}
       </Row>
-      <h2 className="text-uppercase pb-3 border-bottom text-center my-5">
-        Our Performance
-      </h2>
-      <div className="row align-items-center">
+
+      <div className="row align-items-center mt-5">
         <div className="col-lg-6 col-12">
-          <PieChart width={300} height={400}>
-            <Pie
-              data={data01}
-              dataKey="value"
-              cx={200}
-              cy={200}
-              outerRadius={60}
-              fill="#8884d8"
-            />
-            <Pie
-              data={data02}
-              dataKey="value"
-              cx={200}
-              cy={200}
-              innerRadius={70}
-              outerRadius={90}
-              fill="#82ca9d"
-              label
-            />
-          </PieChart>
+          <img className="img-fluid" src={department} alt="" />
         </div>
         <div className="col-lg-6 col-12">
-          <PerformanceLIne></PerformanceLIne>
+          <Chartdetails></Chartdetails>
         </div>
       </div>
     </div>
   );
 };
 
-export default Performance;
+export default Depchart;

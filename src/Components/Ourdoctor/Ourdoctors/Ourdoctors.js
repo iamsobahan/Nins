@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Accordion, Container, Row } from "react-bootstrap";
-import Doctors from "../Doctors/Doctors";
-import faq from "../../images/faq.jpg";
+import Ourdoctor from "../Ourdoctor/Ourdoctor";
+import faq from "../../../images/faq.jpg";
 
-const Ourdoctor = () => {
+const Ourdoctors = () => {
   const [doctors, setdoctor] = useState([]);
 
   useEffect(() => {
@@ -18,10 +18,10 @@ const Ourdoctor = () => {
       </h2>
       <Row xs={1} md={2} lg={3} className="g-4">
         {doctors.map((doctor) => (
-          <Doctors doctor={doctor} key={doctor.key}></Doctors>
+          <Ourdoctor doctor={doctor} key={doctor.key}></Ourdoctor>
         ))}
       </Row>
-      <h2 className="my-5 border-bottom pb-3 text-center text-uppercase">
+      <h2 className="mt-5 border-bottom pb-3 text-center text-uppercase">
         Franqly Ask Question
       </h2>
       <Row className="align-items-center">
@@ -70,4 +70,4 @@ const Ourdoctor = () => {
   );
 };
 
-export default Ourdoctor;
+export default Ourdoctors;
