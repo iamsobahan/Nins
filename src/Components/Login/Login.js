@@ -15,7 +15,7 @@ const Login = () => {
   const auth = getAuth();
   // useName for updating user name
   const [useName, setUserName] = useState("");
-  
+
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   // islogin state for toggle register to log in
@@ -24,7 +24,6 @@ const Login = () => {
   const [error, seterror] = useState("");
 
   const { googleSignIn, setuser } = useAuth();
-
 
   // redirect handler for fixing redirect issue like when after we login ,we can redirect ourdisirable section
   const history = useHistory();
@@ -40,25 +39,23 @@ const Login = () => {
   const handlerName = (e) => {
     setUserName(e.target.value);
   };
- 
 
-   // handleremail for collecting user email
+  // handleremail for collecting user email
   const handleEmail = (e) => {
     setemail(e.target.value);
   };
 
-    // handlerpassword for collecting user password
+  // handlerpassword for collecting user password
   const handlePassword = (e) => {
     setpassword(e.target.value);
   };
-
 
   // handlechange for checking register or login toggle
   const handlechange = (e) => {
     setlogin(e.target.checked);
   };
 
-// handle register for final registration or login
+  // handle register for final registration or login
 
   const handleRegistration = (e) => {
     e.preventDefault();
@@ -106,7 +103,7 @@ const Login = () => {
           seterror(errorMessage);
         });
     };
-// conditional toogle , is user already user or not
+    // conditional toogle , is user already user or not
 
     islogin ? processLogin(email, password) : createUser(email, password);
   };
